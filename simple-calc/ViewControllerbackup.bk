@@ -1,0 +1,117 @@
+//
+//  ViewController.swift
+//  simple-calc
+//
+//  Created by Ian on 10/22/16.
+//  Copyright © 2016 Ian. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+    @IBOutlet weak var valueLabel: UILabel!
+    private var currentNum : String? = nil
+    private var total : Double = 0.0
+    private var op : String?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        currentNum = valueLabel.text!
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func numberButtonPress(_ sender: UIButton) {
+        let numValueString = sender.currentTitle!
+        if(currentNum == nil) {
+            valueLabel.textColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0)
+            valueLabel.text! = numValueString
+            currentNum = numValueString
+        } else if currentNum == "0" {
+            valueLabel.text = numValueString
+            currentNum = numValueString
+        } else {
+            valueLabel.text! += numValueString
+            currentNum! += numValueString
+        } else {
+            valueLabel.text! += numValueString
+            currentNum! += numValueString
+        }
+        
+        if op == nil {
+            total ==
+        } else {
+            total = calculate(left: total, right: Double(currentNum!)!,op: op)
+        }
+        
+    }
+    
+    @IBAction func operatorButtonPress(_ sender: UIButton) {
+        
+        op = sender.currentTitle!
+        
+        
+        //        switch op {
+        ////        case "fact()":
+        ////            // Don't do factorial if array is larger than
+        ////
+        //        case "=":
+        //            total += Double(currentNum!)!
+        //            currentNum = nil
+        //            valueLabel.textColor = UIColor(red:0.00, green:0.80, blue:0.00, alpha:1.0)
+        //            valueLabel.text! = "=\(total)"
+        //            total = 0.0
+        //            return
+        //        case "+":
+        //            total += Double(currentNum!)!
+        //            currentNum = "0"
+        //        case "-":
+        //            total = total -  Double(currentNum!)!
+        //            currentNum = "0"
+        //        case "/":
+        //            total /= Double(currentNum!)!
+        //            currentNum = "0"
+        //        case "x":
+        //            total *= Double(currentNum!)!
+        //            currentNum = "0"
+        //        default:
+        //            break
+        //        }
+        
+        valueLabel.text! += " \(op) "
+    }
+    
+    
+    private func calculate(left: Double, right: Double, op: String) -> Double {
+        switch op {
+            //        case "fact()":
+            //            // Don't do factorial if array is larger than
+            //        //
+            //                case "=":
+            //                    total += Double(currentNum!)!
+            //                    currentNum = nil
+            //                    valueLabel.textColor = UIColor(red:0.00, green:0.80, blue:0.00, alpha:1.0)
+            //                    valueLabel.text! = "=\(total)"
+            //                    total = 0.0
+        //                    return
+        case "+":
+            return left + right
+        case "-":
+            return left - right
+        case "/":
+            return left / right
+        case "x":
+            return left * right
+        default:
+            break
+        }
+        return
+    }
+    
+}
+
