@@ -14,10 +14,12 @@ class ViewController: UIViewController {
     private var operators : Array<String> = []
     private var arrayCounter : Int = 0
     private var currentNum : String = ""
+    private var history : Array<String> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,13 +46,34 @@ class ViewController: UIViewController {
         arrayCounter += 1
 
         if oper == "=" || oper == "fact()" {
-            valueLabel.text = String(calculate(operands, operators))
+            let answer = String(calculate(operands, operators))
+            history.append(getHistory(operands, operators) + answer)
+            valueLabel.text = answer
             operands=[]
             operators=[]
             arrayCounter = 0
             return
         }
     }
+    
+    private func getHistory(_ operands: Array<Int>, _ operators: Array<String>) -> String {
+        var history:String = ""
+        for index in 1 ... operands.count - 1 {
+            history += "\(operands[index - 1]) \(operators[index - 1]) \(operands[index]) \(operators[index])"
+        }
+        return history
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let newView = segue.destination as! HistoryViewController
+        
+        
+        if(segue.identifier == "historyButton") {
+            //newView.ui
+        }
+        
+    }
+
     
     private func calculate(_ operands: Array<Int>, _ operators: Array<String>) -> Double {
         var isAvg : Bool = false

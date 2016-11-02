@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C146B1C1DC9603300ADDEB0 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C146B1B1DC9603300ADDEB0 /* HistoryViewController.swift */; };
 		3C16F0011DBC05BE00B6190B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C16F0001DBC05BE00B6190B /* AppDelegate.swift */; };
 		3C16F0031DBC05BE00B6190B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C16F0021DBC05BE00B6190B /* ViewController.swift */; };
 		3C16F0061DBC05BE00B6190B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C16F0041DBC05BE00B6190B /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C146B1B1DC9603300ADDEB0 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		3C16EFFD1DBC05BE00B6190B /* simple-calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "simple-calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C16F0001DBC05BE00B6190B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C16F0021DBC05BE00B6190B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				3C16F0001DBC05BE00B6190B /* AppDelegate.swift */,
 				3C16F0021DBC05BE00B6190B /* ViewController.swift */,
 				3C16F0041DBC05BE00B6190B /* Main.storyboard */,
+				3C146B1B1DC9603300ADDEB0 /* HistoryViewController.swift */,
 				3C16F0071DBC05BE00B6190B /* Assets.xcassets */,
 				3C16F0091DBC05BE00B6190B /* LaunchScreen.storyboard */,
 				3C16F00C1DBC05BE00B6190B /* Info.plist */,
@@ -268,6 +271,7 @@
 				3C16F0031DBC05BE00B6190B /* ViewController.swift in Sources */,
 				3C16F0011DBC05BE00B6190B /* AppDelegate.swift in Sources */,
 				3C16F02F1DBC995900B6190B /* ViewControllerbackup.bk in Sources */,
+				3C146B1C1DC9603300ADDEB0 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +522,7 @@
 				3C16F0271DBC05BF00B6190B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C16F0281DBC05BF00B6190B /* Build configuration list for PBXNativeTarget "simple-calcTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +531,7 @@
 				3C16F02A1DBC05BF00B6190B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C16F02B1DBC05BF00B6190B /* Build configuration list for PBXNativeTarget "simple-calcUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +540,7 @@
 				3C16F02D1DBC05BF00B6190B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
