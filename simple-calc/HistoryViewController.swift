@@ -10,10 +10,18 @@ import UIKit
 
 class HistoryViewController: UIViewController {
     @IBOutlet weak var historyLabel: UILabel!
+    var history : Array<String> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        for index in 0 ... history.count - 1 {
+            historyLabel.text! += history[index] + "\n"
+        }
+        
+        historyLabel.numberOfLines = 0
+        historyLabel.sizeToFit()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +29,15 @@ class HistoryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let newView = segue.destination as! ViewController
+        
+        
+        if(segue.identifier == "backButton") {
+            newView.history += self.history
+        }
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     private var operators : Array<String> = []
     private var arrayCounter : Int = 0
     private var currentNum : String = ""
-    private var history : Array<String> = []
+    var history : Array<String> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         
         
         if(segue.identifier == "historyButton") {
-            //newView.ui
+            newView.history += self.history
         }
         
     }
